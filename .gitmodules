@@ -1,0 +1,9 @@
+[submodule "fzf-lua"]
+	path = pack/plugins/start/fzf-lua
+	url = https://github.com/ibhagwan/fzf-lua.git
+[submodule "nvim-cmp"]
+    path = pack/plugins/start/nvim-cmp
+    url = https://github.com/hrsh7th/nvim-cmp.git
+[submodule "nvim-lspconfig"]
+    path = pack/plugins/start/nvim-lspconfig
+    url = https://github.com/neovim/nvim-lspconfig.git 
