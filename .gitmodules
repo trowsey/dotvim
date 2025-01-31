@@ -7,3 +7,12 @@
 [submodule "nvim-lspconfig"]
     path = pack/plugins/start/nvim-lspconfig
     url = https://github.com/neovim/nvim-lspconfig.git 
+[submodule "pack/plugins/start/fzf-lua"]
+	path = pack/plugins/start/fzf-lua
+	url = git@github.com:ibhagwan/fzf-lua.git
+[submodule "pack/plugins/start/nvim-cmp"]
+	path = pack/plugins/start/nvim-cmp
+	url = git@github.com:hrsh7th/nvim-cmp.git
+[submodule "pack/plugins/start/nvim-lspconfig"]
+	path = pack/plugins/start/nvim-lspconfig
+	url = git@github.com:neovim/nvim-lspconfig.git
