@@ -19,3 +19,9 @@
 [submodule "pack/plugins/start/nvim-treesitter"]
 	path = pack/plugins/start/nvim-treesitter
 	url = git@github.com:nvim-treesitter/nvim-treesitter.git
+[submodule "pack/plugins/opt/awesome-nvim-colorschemes"]
+	path = pack/plugins/opt/awesome-nvim-colorschemes
+	url = git@github.com:AbdelrahmanDwedar/awesome-nvim-colorschemes.git
+[submodule "pack/plugins/start/awesome-nvim-colorschemes"]
+	path = pack/plugins/start/awesome-nvim-colorschemes
+	url = git@github.com:AbdelrahmanDwedar/awesome-nvim-colorschemes.git
