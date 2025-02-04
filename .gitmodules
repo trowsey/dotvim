@@ -25,3 +25,9 @@
 [submodule "pack/plugins/start/awesome-nvim-colorschemes"]
 	path = pack/plugins/start/awesome-nvim-colorschemes
 	url = git@github.com:AbdelrahmanDwedar/awesome-nvim-colorschemes.git
+[submodule "pack/plugins/start/cmp-nvim-lsp-signature-help"]
+	path = pack/plugins/start/cmp-nvim-lsp-signature-help
+	url = git@github.com:hrsh7th/cmp-nvim-lsp-signature-help.git
+[submodule "pack/plugins/start/cmp-nvim-lsp"]
+	path = pack/plugins/start/cmp-nvim-lsp
+	url = git@github.com:hrsh7th/cmp-nvim-lsp.git
