@@ -5,3 +5,4 @@
 	require('config.plugin')
 	require('config.util')
 	require('config.autocmd')
+	require('config.cmp')
