@@ -33,3 +33,7 @@ if vim.fn.executable('fzf') == 1 then
 	vim.keymap.set('n', '<leader>fs', fzf_lua.live_grep)
 end
 
+-- vim-easy-align
+vim.g.easy_align_ignore_groups = {}
+vim.keymap.set('n', 'ga', '<plug>(EasyAlign)')
+vim.keymap.set('v', '<cr>', '<plug>(EasyAlign)')
