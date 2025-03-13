@@ -37,3 +37,30 @@ end
 vim.g.easy_align_ignore_groups = {}
 vim.keymap.set('n', 'ga', '<plug>(EasyAlign)')
 vim.keymap.set('v', '<cr>', '<plug>(EasyAlign)')
+
+-- revolver
+require('revolver').setup({'.c', '.cpp', '.h', '.hpp', '.inl'})
+vim.keymap.set('n', 'gfs', vim.cmd.Revolve)
+
+-- argonaut.nvim
+local function argonaut_setup(reload)
+    if reload then
+        vim.cmd.ArgonautReload()
+    end
+    require('argonaut').setup({
+        by_filetype = {
+            c = {brace_last_wrap = false},
+            cpp = {brace_last_wrap = false},
+        },
+    })
+end
+
+vim.keymap.set({'x', 'o'}, 'ia', ':<C-u>ArgonautObject inner<cr>', {noremap = true, silent = true})
+vim.keymap.set({'x', 'o'}, 'aa', ':<C-u>ArgonautObject outer<cr>', {noremap = true, silent = true})
+vim.keymap.set({'x', 'o', 'n'}, '<leader>n', ':<C-u>ArgonautObject next<cr>', {noremap = true, silent = true})
+vim.keymap.set({'x', 'o', 'n'}, '<leader>p', ':<C-u>ArgonautObject previous<cr>', {noremap = true, silent = true})
+
+vim.keymap.set('n', '<leader>a', function() argonaut_setup(true) vim.cmd.ArgonautToggle() end)
+vim.keymap.set('n', '<leader>o', function() argonaut_setup(true) vim.cmd.ArgonautReflow() end)
+
+argonaut_setup(false)

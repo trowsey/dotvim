@@ -40,3 +40,9 @@
 [submodule "pack/plugins/start/lualine.nvim"]
 	path = pack/plugins/start/lualine.nvim
 	url = https://github.com/nvim-lualine/lualine.nvim.git
+[submodule "pack/plugins/start/revolver.nvim"]
+	path = pack/plugins/start/revolver.nvim
+	url = https://git.sr.ht/~foosoft/revolver.nvim
+[submodule "pack/plugins/start/argonaut.nvim"]
+	path = pack/plugins/start/argonaut.nvim
+	url = https://git.sr.ht/~foosoft/argonaut.nvim
