@@ -22,6 +22,18 @@ vim.opt.shiftwidth = 4
 vim.opt.wrap = false
 vim.opt.mouse = v 
 
+-- split keymaps
+vim.keymap.set('n', '<a-=>', '<c-w><c-=>')
+vim.keymap.set('n', '<a-h>', '<c-w><')
+vim.keymap.set('n', '<a-j>', '<c-w>+')
+vim.keymap.set('n', '<a-k>', '<c-w>-')
+vim.keymap.set('n', '<a-l>', '<c-w>>')
+vim.keymap.set('n', '<c-h>', '<c-w>h')
+vim.keymap.set('n', '<c-j>', '<c-w>j')
+vim.keymap.set('n', '<c-k>', '<c-w>k')
+vim.keymap.set('n', '<c-l>', '<c-w>l')
+
+
 if vim.fn.has('win32') == 1 then
 	vim.opt.fileformats = {'dos'}
 else
