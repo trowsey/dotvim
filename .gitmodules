@@ -46,3 +46,6 @@
 [submodule "pack/plugins/start/argonaut.nvim"]
 	path = pack/plugins/start/argonaut.nvim
 	url = https://git.sr.ht/~foosoft/argonaut.nvim
+[submodule "pack/plugins/start/nvim-tree"]
+	path = pack/plugins/start/nvim-tree
+	url = https://github.com/nvim-tree/nvim-tree.lua.git

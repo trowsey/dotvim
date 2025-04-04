@@ -13,6 +13,8 @@ vim.cmd.colorscheme('tokyonight')
 
 -- leader
 vim.g.mapleader = ' '
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
 
 --options
 vim.opt.clipboard = 'unnamedplus'
@@ -20,7 +22,8 @@ vim.opt.number = true
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.wrap = false
-vim.opt.mouse = v 
+vim.opt.mouse = v
+vim.opt.termguicolors = true
 
 -- split keymaps
 vim.keymap.set('n', '<a-=>', '<c-w><c-=>')

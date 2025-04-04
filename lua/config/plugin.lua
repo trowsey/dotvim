@@ -1,5 +1,5 @@
 
---fzf lua
+ --fzf lua
 if vim.fn.executable('fzf') == 1 then
 	local fzf_lua = require('fzf-lua')
 	fzf_lua.setup({
@@ -64,3 +64,22 @@ vim.keymap.set('n', '<leader>a', function() argonaut_setup(true) vim.cmd.Argonau
 vim.keymap.set('n', '<leader>o', function() argonaut_setup(true) vim.cmd.ArgonautReflow() end)
 
 argonaut_setup(false)
+
+-- nvim-tree
+-- OR setup with some options
+local nvim_tree = require("nvim-tree").setup({
+  sort = {
+    sorter = "case_sensitive",
+  },
+  view = {
+    width = 30,
+  },
+  renderer = {
+    group_empty = true,
+  },
+  filters = {
+    dotfiles = true,
+  },
+})
+
+vim.keymap.set('n', '<leader>tt', ':NvimTreeToggle<CR>') 
