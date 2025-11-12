@@ -49,3 +49,6 @@
 [submodule "pack/plugins/start/nvim-tree"]
 	path = pack/plugins/start/nvim-tree
 	url = https://github.com/nvim-tree/nvim-tree.lua.git
+[submodule "pack/plugins/start/guid.nvim"]
+	path = pack/plugins/start/guid.nvim
+	url = https://git.sr.ht/~foosoft/guid.nvim

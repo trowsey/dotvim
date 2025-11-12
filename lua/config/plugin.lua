@@ -83,3 +83,8 @@ local nvim_tree = require("nvim-tree").setup({
 })
 
 vim.keymap.set('n', '<leader>tt', ':NvimTreeToggle<CR>') 
+
+
+-- guid.nvim
+require('guid').setup({ comma_space = true })
+vim.keymap.set({'x', 'o'}, 'ag', ':<c-u>GuidObject<cr>')
