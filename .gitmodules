@@ -40,3 +40,9 @@
 [submodule "pack/plugins/start/guid.nvim"]
 	path = pack/plugins/start/guid.nvim
 	url = https://git.sr.ht/~foosoft/guid.nvim
+[submodule "pack/plugins/start/CopilotChat.nvim"]
+	path = pack/plugins/start/CopilotChat.nvim
+	url = https://github.com/CopilotC-Nvim/CopilotChat.nvim
+[submodule "pack/plugins/start/plenary.nvim"]
+	path = pack/plugins/start/plenary.nvim
+	url = https://github.com/nvim-lua/plenary.nvim

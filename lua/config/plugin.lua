@@ -33,6 +33,27 @@ if vim.fn.executable('fzf') == 1 then
 	vim.keymap.set('n', '<leader>fs', fzf_lua.live_grep)
 end
 
+-- copilotchat.nvim
+require('CopilotChat').setup({
+    mappings = {
+        jump_to_diff = { insert = '', normal = '' }, ---@diagnostic disable-line
+        reset = { insert = '', normal = '' }, ---@diagnostic disable-line
+    },
+    resources = {
+        'buffer',
+        'selection',
+    }
+})
+
+vim.keymap.set('n', '<leader>pc', vim.cmd.CopilotChatCommit)
+
+vim.keymap.set({ 'n', 'v' }, '<leader>pd', vim.cmd.CopilotChatDocs)
+vim.keymap.set({ 'n', 'v' }, '<leader>pe', vim.cmd.CopilotChatExplain)
+vim.keymap.set({ 'n', 'v' }, '<leader>po', vim.cmd.CopilotChatOptimize)
+vim.keymap.set({ 'n', 'v' }, '<leader>pr', vim.cmd.CopilotChatReview)
+vim.keymap.set({ 'n', 'v' }, '<leader>pt', vim.cmd.CopilotChatToggle)
+
+
 -- vim-easy-align
 vim.g.easy_align_ignore_groups = {}
 vim.keymap.set('n', 'ga', '<plug>(EasyAlign)')
