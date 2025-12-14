@@ -33,6 +33,9 @@ if vim.fn.executable('fzf') == 1 then
 	vim.keymap.set('n', '<leader>fs', fzf_lua.live_grep)
 end
 
+
+
+
 -- copilotchat.nvim
 require('CopilotChat').setup({
     mappings = {
@@ -52,6 +55,9 @@ vim.keymap.set({ 'n', 'v' }, '<leader>pe', vim.cmd.CopilotChatExplain)
 vim.keymap.set({ 'n', 'v' }, '<leader>po', vim.cmd.CopilotChatOptimize)
 vim.keymap.set({ 'n', 'v' }, '<leader>pr', vim.cmd.CopilotChatReview)
 vim.keymap.set({ 'n', 'v' }, '<leader>pt', vim.cmd.CopilotChatToggle)
+
+
+
 
 -- neovim remote + git + terminal QOL
 
@@ -91,9 +97,15 @@ vim.g.easy_align_ignore_groups = {}
 vim.keymap.set('n', 'ga', '<plug>(EasyAlign)')
 vim.keymap.set('v', '<cr>', '<plug>(EasyAlign)')
 
+
+
+
 -- revolver
 require('revolver').setup({'.c', '.cpp', '.h', '.hpp', '.inl'})
 vim.keymap.set('n', 'gfs', vim.cmd.Revolve)
+
+
+
 
 -- argonaut.nvim
 local function argonaut_setup(reload)
@@ -118,6 +130,9 @@ vim.keymap.set('n', '<leader>o', function() argonaut_setup(true) vim.cmd.Argonau
 
 argonaut_setup(false)
 
+
+
+
 -- nvim-tree
 -- OR setup with some options
 local nvim_tree = require("nvim-tree").setup({
@@ -136,6 +151,8 @@ local nvim_tree = require("nvim-tree").setup({
 })
 
 vim.keymap.set('n', '<leader>tt', ':NvimTreeToggle<CR>') 
+
+
 
 
 -- guid.nvim
