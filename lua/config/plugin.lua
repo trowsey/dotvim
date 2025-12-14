@@ -53,6 +53,38 @@ vim.keymap.set({ 'n', 'v' }, '<leader>po', vim.cmd.CopilotChatOptimize)
 vim.keymap.set({ 'n', 'v' }, '<leader>pr', vim.cmd.CopilotChatReview)
 vim.keymap.set({ 'n', 'v' }, '<leader>pt', vim.cmd.CopilotChatToggle)
 
+-- neovim remote + git + terminal QOL
+
+-- 1) If nvr is available, make Git use the current Neovim instance.
+--    This prevents "Neovim inside Neovim" when you run `git commit` in :terminal.
+do
+  local has_nvr = (vim.fn.executable('nvr') == 1)
+  if has_nvr then
+    -- Editor command nvr will attach to this Neovim and wait for you to :wq
+    local editor = 'nvr --remote-wait +"setlocal bufhidden=wipe"'
+    -- Export for the current Neovim/session (works for shells launched from :terminal)
+    vim.env.GIT_EDITOR = editor
+
+    -- Optional: one-shot helper to persist globally in Git (run when you want)
+    vim.api.nvim_create_user_command('NvrSetupGit', function()
+      -- Only sets if not already the same
+      local current = vim.fn.system('git config --global --get core.editor')
+      if not string.find(current or '', 'nvr') then
+        vim.fn.system('git config --global core.editor ' .. editor)
+        print('Git core.editor set to nvr for all shells.')
+      else
+        print('Git core.editor already uses nvr.')
+      end
+    end, {})
+  else
+    vim.schedule(function()
+      vim.notify(
+        'nvr not found on PATH. Install with: pip install neovim-remote',
+        vim.log.levels.WARN
+      )
+    end)
+  end
+end
 
 -- vim-easy-align
 vim.g.easy_align_ignore_groups = {}
