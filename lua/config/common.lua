@@ -24,7 +24,6 @@ vim.opt.shiftwidth = 4
 vim.opt.wrap = false
 vim.opt.mouse = v
 vim.opt.termguicolors = true
-vim.opt.shell = "pwsh"
 
 -- split keymaps
 vim.keymap.set('n', '<a-=>', '<c-w><c-=>')
